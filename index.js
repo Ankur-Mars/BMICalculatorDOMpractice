@@ -1,7 +1,3 @@
-
-let BMI_ratio;
-let BMI_tag;
-
 function Clearinputs() {
     let Ageinput = document.getElementById("inputAgenumber");
     let heightinput = document.getElementById("inputheightinCMtext");
@@ -32,12 +28,14 @@ function ComputeBMI() {
     let Weightinput = document.getElementById("inputWeightinKGtext");
     let Gender = document.getElementsByName("Gender");
     let Displaytext = document.getElementById("resultText");
+    let BMI_ratio= "";
+    let BMI_tag="";
 
         if((Gender[0].checked || Gender[1].checked) && (Ageinput.value != "") &&( heightinput.value != "") &&( Weightinput.value != ""))
         {
         
             BMI_ratio = (Weightinput.value)/((heightinput.value *0.01 )*(heightinput.value*0.01));
-            console.log(BMI_ratio);
+            //console.log(BMI_ratio);
 
             /***
                 *BMI          	        *Category
@@ -53,32 +51,32 @@ function ComputeBMI() {
 
             if (BMI_ratio<=18.5) 
             {
-                console.log("Underweight");
+                //console.log("Underweight");
                 BMI_tag="Underweight";
             } 
             else if(BMI_ratio>18.5 && BMI_ratio <= 24.9)
             {
-                console.log("Normal weight");
+                //console.log("Normal weight");
                 BMI_tag="Normal weight";
             }
             else if(BMI_ratio>25 && BMI_ratio <= 29.9)
             {
-                console.log("Overweight");
+                //console.log("Overweight");
                 BMI_tag="Overweight";
             }
             else if(BMI_ratio>30 && BMI_ratio <= 39.9)
             {
-                console.log("Obese- Class I");
+                //console.log("Obese- Class I");
                 BMI_tag="Obese- Class I";
             }
             else if( BMI_ratio>40 && BMI_ratio<= 39.9)
             {
-                console.log("Obese- Class II");
+                //console.log("Obese- Class II");
                 BMI_tag="Obese- Class II";
             }
             else
             {
-                console.log("Obese- Class III");
+                //console.log("Obese- Class III");
                 BMI_tag="Obese- Class III";
             }
 
@@ -87,10 +85,11 @@ function ComputeBMI() {
         }
         else
         {
-            console.log("Enter all input data");
+            //console.log("Enter all input data");
+            window.alert("Enter all input data");
         }
 
-        Displaytext.innerText= `${BMI_ratio} ${BMI_tag}`;
+        Displaytext.innerText= `${BMI_ratio.toFixed(2)} ${BMI_tag}`;
 
 
     

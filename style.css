@@ -13,16 +13,19 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    padding: 20px;
+    padding: 0px;
+    margin-top: 0px;
 }
 
 #BMICalc {
     background: white;
-    padding: 2rem;
+    padding: 4rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     width: 100%;
     max-width: 450px;
+    margin-top: 0;
+    margin: 0;
 }
 
 #CalculatorTitle {
@@ -30,12 +33,16 @@ body {
     text-align: center;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    border-top: 2px solid var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
+   
 }
 
 .input-group {
     margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
 }
 
 label {
@@ -81,7 +88,7 @@ button {
 }
 
 button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 #ButtonBMICompute {
@@ -115,6 +122,7 @@ button:hover {
     color: var(--primary-color);
     font-weight: bold;
     margin-top: 0.5rem;
+    margin-right: 1.5rem;
     padding: 1rem;
     background-color: white;
     border-radius: 8px;
