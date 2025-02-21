@@ -1,0 +1,19 @@
+
+body{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: aqua;
+    margin: 0;
+    padding: 0 ;
+    align-content: center;
+}
+
+.BMICalc{
+    height: 800px;
+    width: 720px;
+
+}
+
+

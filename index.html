@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div id="BMICalc">
+            <h1 id="CalculatorTitle"> BMI Calculator</h1>
+        </div>
+        <div id="inputGender">
+            <label>Gender</label>
+            <input type="radio" name="Gender" id="inputMale" unchecked >
+            <label for="inputMale">Male</label>
+            <input type="radio" name="Gender" id="inputFemale" unchecked >
+            <label for="inputFeMale">Female</label>
+        </div>
+        <div id="inputAge">
+            <label for="inputAgenum">Age in years</label>
+            <input type="number" name="inputAgenum" id="inputAgenumber" min="2" max="120" placeholder="2-120"> 
+        </div>
+
+        <div id="inputheightinCM">
+            <label for="inputheightinCMtext">Height in cm</label>
+            <input type="number" name="" id="inputheightinCMtext" min="150" max="195" placeholder="166">
+        </div>
+
+        <div id="inputWeightinKG">
+            <label for="inputWeightinKGtext">weight in Kg</label>
+            <input type="number" name="inputWeightinKGtextname"  min="5" max="500"id="inputWeightinKGtext" placeholder="69">
+
+        </div>
+
+        <div id="ComputeBMIbutton">
+            <button id="ButtonBMICompute" onclick="ComputeBMI()"> Calculate BMI</button>
+        </div>
+
+        <div id="Clearall">
+            <button id="ButtonClearall" onclick="Clearinputs()"> Clear</button>
+
+        </div >
+
+        <div id="ResultBMI">
+            <h2> BMI Result:</h2>
+            <div id="resultText">
+                
+            </div>
+        </div>
+
+
+    
+</body>
+</html>
