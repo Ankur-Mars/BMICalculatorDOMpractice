@@ -1,19 +1,132 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --button-hover: #2980b9;
+}
 
-body{
-    display: grid;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--background-gradient);
+    min-height: 100vh;
+    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: aqua;
     margin: 0;
-    padding: 0 ;
-    align-content: center;
+    padding: 20px;
 }
 
-.BMICalc{
-    height: 800px;
-    width: 720px;
-
+#BMICalc {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 450px;
 }
 
+#CalculatorTitle {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
 
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+#ButtonBMICompute {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+#ButtonBMICompute:hover {
+    background-color: var(--button-hover);
+}
+
+#ButtonClearall {
+    background-color: #e74c3c;
+    color: white;
+}
+
+#ButtonClearall:hover {
+    background-color: #c0392b;
+}
+
+#ResultBMI {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#resultText {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #BMICalc {
+        padding: 1.5rem;
+    }
+    
+    #CalculatorTitle {
+        font-size: 1.5rem;
+    }
+}
